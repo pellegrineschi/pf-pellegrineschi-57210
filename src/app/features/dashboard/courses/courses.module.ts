@@ -11,6 +11,8 @@ import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CouseDialogComponent } from './components/couse-dialog/couse-dialog.component';
 import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatTableModule} from '@angular/material/table';
+
 
 
 
@@ -30,7 +32,8 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
     MatFormFieldModule,
     MatInputModule,
     ReactiveFormsModule,
-    MatDatepickerModule
+    MatDatepickerModule,
+    MatTableModule
   ]
 })
 export class CoursesModule { }
