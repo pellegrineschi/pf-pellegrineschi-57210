@@ -9,15 +9,19 @@ import { AuthModule } from './features/auth/auth.module';
 import { provideNativeDateAdapter } from '@angular/material/core';
 
 
+
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     DashboardModule,
-    AuthModule
+    AuthModule,
+    
 
   ],
   providers: [

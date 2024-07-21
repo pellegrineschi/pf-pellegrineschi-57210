@@ -10,6 +10,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatCardModule} from '@angular/material/card';
 import { CoursesModule } from './courses/courses.module';
 import {MatListModule} from '@angular/material/list';
+import { StudentsModule } from './students/students.module';
+
 
 
 
@@ -32,7 +34,9 @@ import {MatListModule} from '@angular/material/list';
     MatToolbarModule,
     MatCardModule,
     CoursesModule,
-    MatListModule
-  ]
+    MatListModule,
+    StudentsModule
+    
+]
 })
 export class DashboardModule { }
