@@ -11,6 +11,7 @@ import {MatCardModule} from '@angular/material/card';
 import { CoursesModule } from './courses/courses.module';
 import {MatListModule} from '@angular/material/list';
 import { StudentsModule } from './students/students.module';
+import { SharedModule } from '../../shared/shared.module';
 
 
 
@@ -35,7 +36,8 @@ import { StudentsModule } from './students/students.module';
     MatCardModule,
     CoursesModule,
     MatListModule,
-    StudentsModule
+    StudentsModule,
+    SharedModule
     
 ]
 })

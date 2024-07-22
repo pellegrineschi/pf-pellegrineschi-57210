@@ -7,6 +7,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { DashboardModule } from './features/dashboard/dashboard.module';
 import { AuthModule } from './features/auth/auth.module';
 import { provideNativeDateAdapter } from '@angular/material/core';
+import { SharedModule } from './shared/shared.module';
 
 
 
@@ -21,6 +22,7 @@ import { provideNativeDateAdapter } from '@angular/material/core';
     AppRoutingModule,
     DashboardModule,
     AuthModule,
+    SharedModule
     
 
   ],
