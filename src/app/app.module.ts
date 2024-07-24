@@ -10,20 +10,21 @@ import { provideNativeDateAdapter } from '@angular/material/core';
 import { SharedModule } from './shared/shared.module';
 
 
-
-
 @NgModule({
   declarations: [
-    AppComponent,
-    
+    AppComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     DashboardModule,
+<<<<<<< HEAD
     AuthModule,
     SharedModule
     
+=======
+    AuthModule
+>>>>>>> parent of 2304e60 (alumnos)
 
   ],
   providers: [

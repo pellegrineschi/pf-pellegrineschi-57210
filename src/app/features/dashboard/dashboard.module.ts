@@ -10,9 +10,12 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatCardModule} from '@angular/material/card';
 import { CoursesModule } from './courses/courses.module';
 import {MatListModule} from '@angular/material/list';
+<<<<<<< HEAD
 import { StudentsModule } from './students/students.module';
 import { SharedModule } from '../../shared/shared.module';
 
+=======
+>>>>>>> parent of 2304e60 (alumnos)
 
 
 
@@ -35,10 +38,15 @@ import { SharedModule } from '../../shared/shared.module';
     MatToolbarModule,
     MatCardModule,
     CoursesModule,
+<<<<<<< HEAD
     MatListModule,
     StudentsModule,
     SharedModule
     
 ]
+=======
+    MatListModule
+  ]
+>>>>>>> parent of 2304e60 (alumnos)
 })
 export class DashboardModule { }
