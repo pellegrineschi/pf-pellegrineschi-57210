@@ -2,7 +2,7 @@
     <mat-icon>add</mat-icon>Agregar estudiante
 </button>
 
-<p>el nombre del alumno es: {{nombreAlumno}}</p>
+<p appTitulos>el nombre del alumno es: {{nombreAlumno}}</p>
 
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
@@ -18,7 +18,7 @@
     <!-- Name Column -->
     <ng-container matColumnDef="name">
       <th mat-header-cell *matHeaderCellDef> Nombre y Apellido </th>
-      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+      <td mat-cell *matCellDef="let element"> {{element | fullname}} </td>
     </ng-container>
 
     <ng-container matColumnDef="startDate">

@@ -12,6 +12,7 @@ import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { StudentsDialogComponent } from './components/students-dialog/students-dialog.component';
+import { Shared1Module } from '../../shared/shared1/shared1.module';
 
 
 
@@ -33,7 +34,8 @@ import { StudentsDialogComponent } from './components/students-dialog/students-d
     MatInputModule,
     ReactiveFormsModule,
     MatDatepickerModule,
-    MatTableModule
+    MatTableModule,
+    Shared1Module
   ]
 })
 export class StudentsModule { }
