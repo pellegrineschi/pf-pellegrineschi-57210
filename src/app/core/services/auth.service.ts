@@ -5,9 +5,11 @@ import { Injectable } from '@angular/core';
 })
 export class AuthService {
 
-  login(){
-    
-  }
+  login(){}
+
+  verificarToken(){}
+
+  obtenerUsuarioAutenticado(){}
 
   constructor() { }
 }
