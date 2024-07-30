@@ -24,7 +24,6 @@ export class CoursesComponent implements OnInit {
 
   isLoading = false;
 
-
   constructor(
     private matDialog: MatDialog,
     private coursesService: CoursesService
@@ -33,16 +32,16 @@ export class CoursesComponent implements OnInit {
     this.loadCourses();
   }
 
-  loadCourses(){
+  loadCourses() {
     this.isLoading = true;
     this.coursesService.getCourses().subscribe({
-      next: (courses)=>{
+      next: (courses) => {
         this.dataSource = courses;
       },
-      complete:()=>{
+      complete: () => {
         this.isLoading = false;
-      }
-    })
+      },
+    });
   }
 
   openDialog(): void {
@@ -56,7 +55,16 @@ export class CoursesComponent implements OnInit {
 
           value['id'] = generateId(5);
 
-          this.dataSource = [...this.dataSource, value];
+          this.isLoading = true;
+
+          this.coursesService.addCourses(value).subscribe({
+            next: (courses) => {
+              this.dataSource = [...courses];
+            },
+            complete: () => {
+              this.isLoading = false;
+            },
+          });
         },
       });
   }
@@ -68,17 +76,28 @@ export class CoursesComponent implements OnInit {
       .subscribe({
         next: (value) => {
           if (!!value) {
-            this.dataSource = this.dataSource.map((el) =>
-              el.id === editingCourse.id
-                ? { ...value, id: editingCourse.id }
-                : el
-            );
+            this.coursesService.editCourseById(editingCourse.id, value).subscribe({
+              next: (courses)=>{
+                this.dataSource =[...courses]
+              }
+            })
           }
         },
       });
   }
 
   deleteCouseById(id: string) {
-    this.dataSource = this.dataSource.filter((el) => el.id != id);
+    if (confirm('estas seguro?')) {
+      this.isLoading = true;
+      this.coursesService.deleteCoursesById(id).subscribe({
+        next: (courses) => {
+          this.dataSource = [...courses];
+        },
+
+        complete: () => {
+          this.isLoading = false;
+        },
+      });
+    }
   }
 }
