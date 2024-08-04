@@ -5,8 +5,10 @@ import { DashboardComponent } from './features/dashboard/dashboard.component';
 import { CoursesComponent } from './features/dashboard/courses/courses.component';
 import { EnrollmentsComponent } from './features/dashboard/enrollments/enrollments.component';
 import { CourseDetailComponent } from './features/dashboard/courses/pages/course-detail/course-detail.component';
+import { HomeComponent } from './features/dashboard/home/home.component';
 
 const routes: Routes = [
+ 
   {
     path: 'auth',
     component: LoginComponent
@@ -15,6 +17,11 @@ const routes: Routes = [
     path: 'dashboard',
     component: DashboardComponent,
     children: [
+      {
+        path : 'home',
+        component: HomeComponent
+
+      },
       {
         path: 'courses',
         component: CoursesComponent
@@ -26,8 +33,19 @@ const routes: Routes = [
       {
         path:'enrollments',
         component: EnrollmentsComponent
+      },
+
+      {
+        path:'**',
+        redirectTo:'dasboard/home'
       }
-    ]
+
+    ],
+        
+  },
+  {
+    path: '**',
+    redirectTo: '/auth'
   }
 ];
 

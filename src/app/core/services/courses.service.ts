@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { map, Observable } from 'rxjs';
 import { Courses } from '../../features/dashboard/courses/models/index.model';
 
 @Injectable({ providedIn: 'root' })
@@ -52,5 +52,11 @@ export class CoursesService {
     )
     return this.getCourses();
 
+  }
+
+  getCousesById(id:string):Observable<Courses | undefined>{
+    return this.getCourses().pipe(
+      map((allCouses)=>allCouses.find((el)=> el.id === id))
+    );
   }
 }
