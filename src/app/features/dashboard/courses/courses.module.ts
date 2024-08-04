@@ -13,6 +13,7 @@ import { CouseDialogComponent } from './components/couse-dialog/couse-dialog.com
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatTableModule} from '@angular/material/table';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { CourseDetailComponent } from './pages/course-detail/course-detail.component';
 
 
 
@@ -22,7 +23,8 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 @NgModule({
   declarations: [
     CoursesComponent,
-    CouseDialogComponent
+    CouseDialogComponent,
+    CourseDetailComponent
   ],
   exports:[CoursesComponent],
   imports: [
